@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.login-form,.register-form{
+    max-width: 980px;
+    margin: 10px auto;
+    mat-form-field {
+        display: block;
+        width: 100%;
+    }
+    & > mat-card > form{
+        margin-bottom: 20px;
+    }
+    & > mat-card > button.google-login{
+        color: #fff;
+        background: #2196F3;
+    }
+    button{
+        width: 100%;
+        text-transform: uppercase;
+    }
+    p{
+        margin-bottom: 0;
+       
+    }
+}
+.form .form-error{
+    color: red;
+    font-size: 0.9em;
+    font-style: italic;
+}

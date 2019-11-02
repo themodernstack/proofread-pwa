@@ -1,0 +1,25 @@
+<div *ngIf="afAuth.user | async as user; else showLogin">
+    <h1>Hello {{ user.displayName }}!</h1>
+    <button (click)="logout()">Logout</button>
+</div>
+<ng-template #showLogin>
+    <div class="login-form form">
+        <mat-card>
+            <p>Login with Email</p>
+            <form [formGroup]="loginForm" (ngSubmit)="loginEmail(loginForm)">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Email" [formControl]="email">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" [formControl]="password">
+                </mat-form-field>
+                <button mat-stroked-button type="submit" [disabled]="!valid">Login</button>
+            </form>
+            <button class="google-login" mat-stroked-button (click)="loginGoogle()">Login with Google</button>
+            <p> Dont have an account ? <a [routerLink]="['/user/register']">Register</a> </p>
+        </mat-card>
+        <p class="form-error" *ngFor="let error of errors; let i = index">
+            {{error}}
+        </p>
+    </div>
+</ng-template>
