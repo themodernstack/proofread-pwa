@@ -2,7 +2,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+.mat-toolbar{
+    margin-bottom:20px;
+}
 .login-form,.register-form{
     max-width: 980px;
     margin: 10px auto;
@@ -31,3 +33,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 0.9em;
     font-style: italic;
 }
+.app-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+mat-card > form { 
+    & > mat-form-field{
+     display: block;
+     width: 100%;
+ 
+   }
+   button[type="submit"]{
+     width:100%;
+   }
+ 
+ }

@@ -10,10 +10,15 @@ import { environment } from '../environments/environment';
 import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
+import { DocumentLayoutComponent } from './layouts/document-layout/document-layout.component';
+import { AngularFirestore } from '@angular/fire/firestore';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    UserLayoutComponent
+    UserLayoutComponent,
+    DocumentLayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,8 +27,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     MatToolbarModule, 
+
   ],
-  providers: [],
+  providers: [
+    AngularFirestore
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
