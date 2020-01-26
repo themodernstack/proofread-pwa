@@ -10,9 +10,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
+import { DateFormatPipe } from './../pipe/date.format.pipe';
+import { TruncatePipe } from './../pipe/truncate.pipe';
 
 @NgModule({
-  declarations: [DocumentComponent, DocumentViewComponent, DocumentListComponent],
+  declarations: [DocumentComponent, DocumentViewComponent, DocumentListComponent,DateFormatPipe, TruncatePipe],
   imports: [
     CommonModule,
     DocumentRoutingModule,

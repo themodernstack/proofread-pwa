@@ -1,1 +1,8 @@
-<p>document-view works!</p>
+<mat-card class="content-card">
+    <mat-card-header>
+        <mat-card-title>
+            <mat-icon class="title-icon">subject</mat-icon> {{document?.title}}
+        </mat-card-title>
+    </mat-card-header>
+    {{document?.content}}
+</mat-card>

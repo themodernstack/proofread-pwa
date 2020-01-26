@@ -48,6 +48,7 @@ export class DocumentComponent implements OnInit {
     this.documentForm = this.fb.group({
       title: ['', Validators.required],
       content: ['', Validators.required],
+      createdAt:[],
     });
   }
 

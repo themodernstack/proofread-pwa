@@ -1,1 +1,17 @@
-<p>document-list works!</p>
+<div class="document-list">
+<mat-card *ngFor="let item of list; let i = index">
+  <mat-card-header>
+    <mat-card-title><mat-icon class="title-icon">subject</mat-icon>{{item.data().title}}</mat-card-title>
+    <mat-card-subtitle>  Created on {{item.data().createdAt|dateFormat}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      {{item.data().content|truncate : 350 : false : '...'}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button [routerLink]="['/document/update/'+ item.id]">Proofread</button>
+      <button mat-stroked-button [routerLink]="['/document/view/'+ item.id]">Preview</button>
+      <button mat-stroked-button (click)="delete(i)">Delete</button>
+    </mat-card-actions>
+</mat-card>
+</div>
+<button class="load-more" mat-stroked-button (click)="loadNext()" [disabled]="end">Load more</button>

@@ -14,6 +14,7 @@ import { DocumentLayoutComponent } from './layouts/document-layout/document-layo
 import { AngularFirestore } from '@angular/fire/firestore';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
   ],
   providers: [
-    AngularFirestore
+    AngularFirestore,
   ],
   bootstrap: [AppComponent]
 })
