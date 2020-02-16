@@ -12,7 +12,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { DocumentLayoutComponent } from './layouts/document-layout/document-layout.component';
 import { AngularFirestore } from '@angular/fire/firestore';
-
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   ],
   imports: [
     BrowserModule,
+    EditorModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -32,6 +34,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   ],
   providers: [
     AngularFirestore,
+    AngularFireAuthGuard
   ],
   bootstrap: [AppComponent]
 })

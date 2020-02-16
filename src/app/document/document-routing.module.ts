@@ -12,34 +12,35 @@ const routes: Routes = [
           title: 'Document'
       },
       children: [
+        {
+            path: '',
+            component: DocumentListComponent,
+            data: {
+                title: 'All Documents',
+            }
+        },
           {
-              path: 'create',
+              path: 'document/create',
               component:DocumentComponent,
               data: {
                   title: 'Create',
               }
           },
           {
-            path: 'update/:id',
+            path: 'document/update/:id',
             component:DocumentComponent,
             data: {
                 title: 'Update',
             }
           },
           {
-            path: 'view/:id',
+            path: 'document/view/:id',
             component: DocumentViewComponent,
             data: {
                 title: 'View Document',
             }
           },
-          {
-              path: 'list',
-              component: DocumentListComponent,
-              data: {
-                  title: 'All Documents',
-              }
-          },
+         
       ]
   }
 ];

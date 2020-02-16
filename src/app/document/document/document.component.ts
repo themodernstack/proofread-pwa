@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./document.component.scss']
 })
 export class DocumentComponent implements OnInit {
+
   private documentForm: FormGroup;
   private sub: any;
   private id: string = null;
@@ -34,6 +35,7 @@ export class DocumentComponent implements OnInit {
     if (this.updateContext) {
       this.setForm(this.id);
     }
+    
   }
 
   ngOnDestroy() {
