@@ -8,8 +8,8 @@ import { FormBuilder, Validators, FormGroup, AbstractControl } from '@angular/fo
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent  {
-  private registerForm: FormGroup;
-  private errors: string[] = [];
+  public registerForm: FormGroup;
+  public errors: string[] = [];
 
   constructor(public afAuth: AngularFireAuth, private _formBuilder: FormBuilder, ) {
     this.registerForm = _formBuilder.group({

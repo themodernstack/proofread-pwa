@@ -1,12 +1,8 @@
-<div *ngIf="afAuth.user | async as user; else showRegister">
-    <h1>Hello {{ user.displayName }}!</h1>
-    <button (click)="logout()">Logout</button>
-</div>
 <ng-template #showRegister>
     <div class="register-form form">
         <mat-card>
             <p>Register</p>
-            <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)">
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
                 <mat-form-field>
                     <input matInput type="text" placeholder="Email" [formControl]="email">
                 </mat-form-field>

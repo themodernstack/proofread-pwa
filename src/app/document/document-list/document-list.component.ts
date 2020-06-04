@@ -12,8 +12,8 @@ import { firestore } from 'firebase';
 export class DocumentListComponent implements OnInit {
   private cursor: any= null;
   private numOfItems: number = 3;
-  private end: Boolean = false;
-  private list: Array<firestore.QueryDocumentSnapshot>=[];
+  public end: Boolean = false;
+  public list: Array<firestore.QueryDocumentSnapshot>=[];
   constructor(
     private documentService: DocumentService,
     private route: ActivatedRoute,
@@ -24,7 +24,7 @@ export class DocumentListComponent implements OnInit {
     this.loadNext();
   }
 
-  private loadNext(){
+  public loadNext(){
     this.documentService.all(this.cursor,this.numOfItems).get().then(data=>{
       if(data.empty){
         this.end=true;
@@ -36,7 +36,7 @@ export class DocumentListComponent implements OnInit {
    });
   }
 
-  private delete(index: number){
+  public delete(index: number){
     if (this.list.length == index-1){
       this.cursor = this.list[this.list.length-2]
     }

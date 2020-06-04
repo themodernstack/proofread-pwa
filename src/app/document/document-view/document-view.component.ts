@@ -10,7 +10,7 @@ import { Document } from 'src/app/model/document';
 })
 export class DocumentViewComponent implements OnInit {
   private sub: any;
-  private document: Document
+  public document: Document
   constructor(private documentService: DocumentService,
     private route: ActivatedRoute,
     private router: Router

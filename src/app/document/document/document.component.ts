@@ -10,11 +10,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DocumentComponent implements OnInit {
 
-  private documentForm: FormGroup;
+  public documentForm: FormGroup;
   private sub: any;
   private id: string = null;
   private documentExists = true;
-  private document: Document;
+  public document: Document;
   constructor(
     private fb: FormBuilder,
     private documentService: DocumentService,

@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  private loginForm: FormGroup;
-  private errors: string[] = [];
+  public loginForm: FormGroup;
+  public errors: string[] = [];
 
   constructor(public afAuth: AngularFireAuth, private _formBuilder: FormBuilder,private _snackBar: MatSnackBar,    private router: Router ) {
     if(router.url === "/user/logout"){
