@@ -12,7 +12,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
 import { DateFormatPipe } from './../pipe/date.format.pipe';
 import { TruncatePipe } from './../pipe/truncate.pipe';
-import { EditorModule } from '@tinymce/tinymce-angular';
+
 @NgModule({
   declarations: [DocumentComponent, DocumentViewComponent, DocumentListComponent,DateFormatPipe, TruncatePipe],
   imports: [
@@ -24,7 +24,6 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     MatButtonModule,
     MatSnackBarModule,
     MatIconModule,
-    EditorModule,
   ]
 })
 export class DocumentModule { }
