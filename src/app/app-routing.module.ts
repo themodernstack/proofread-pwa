@@ -11,7 +11,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: './document/document.module#DocumentModule'
+        loadChildren: () => import('./document/document.module').then(m => m.DocumentModule)
       },
     ],
     canActivate: [AngularFireAuthGuard],
@@ -24,7 +24,7 @@ export const routes: Routes = [
     children: [
       {
         path: 'user',
-        loadChildren: './user/user.module#UserModule'
+        loadChildren: () => import('./user/user.module').then(m => m.UserModule)
       },
     ],
   },
